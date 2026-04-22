@@ -48,8 +48,7 @@ export default function Home() {
         );
     }
 
-    // ⚠️ temporary (until backend sends grade_id)
-    const gradeId = parseInt(profile.grade_name);
+    const gradeId = profile?.grade_id;
 
     return (
         <div className="min-h-screen bg-white dark:bg-black px-6 py-8">

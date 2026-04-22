@@ -242,7 +242,7 @@ export const getServices = async () => {
 
 export const getTheoryTopics = async (serviceId) => {
   const user = getUser();
-  const gradeId = parseInt(user?.grade_name);
+  const gradeId = user?.grade_id;
 
   const res = await api.get(
     `/api/learning/theory/?grade_id=${gradeId}&service_id=${serviceId}`
@@ -256,7 +256,7 @@ export const getTopicDetail = async (topicId) =>
 
 export const getTests = async (serviceId) => {
   const user = getUser();
-  const gradeId = parseInt(user?.grade_name);
+  const gradeId = user?.grade_id;
 
   const res = await api.get(
     `/api/learning/case-studies/?service_id=${serviceId}&grade_id=${gradeId}`
